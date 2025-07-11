@@ -17,7 +17,7 @@ A modern, responsive chatbot interface built with Next.js and integrated with Op
 
 - Node.js 18+ installed
 - OpenAI API key
-- Assistant ID (provided: `asst_XL1dp4NstLPyRzITCUf9nQE1`)
+- Assistant ID (provided: `xx`)
 
 ### Local Development
 
@@ -66,7 +66,7 @@ A modern, responsive chatbot interface built with Next.js and integrated with Op
    
    In your Vercel dashboard, add these environment variables:
    - `OPENAI_API_KEY`: Your OpenAI API key
-   - `ASSISTANT_ID`: `asst_XL1dp4NstLPyRzITCUf9nQE1`
+   - `ASSISTANT_ID`: `xx`
    - `NEXT_PUBLIC_APP_NAME`: `Group 3 Chatbot`
 
 ## Project Structure
