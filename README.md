@@ -23,7 +23,7 @@ A modern, responsive chatbot interface built with Next.js and integrated with Op
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/mucahitkayadan/team-chatbot.git
    cd group3-chatbot
    ```
 
