@@ -16,8 +16,38 @@ A modern, responsive chatbot interface built with Next.js and integrated with Op
 ### Prerequisites
 
 - Node.js 18+ installed
-- OpenAI API key
-- Assistant ID (provided: `xx`)
+
+### OpenAI Assistant and API Key Setup
+
+Before running the application, you need to set up an OpenAI Assistant. This involves creating the assistant, configuring it with a system prompt, attaching a vector store with resume files, and obtaining an API key.
+
+1.  **Sign up or Log in to OpenAI**
+    *   Navigate to [OpenAI Platform](https://platform.openai.com/).
+
+2.  **Create an Assistant**
+    *   Go to the [Assistants page](https://platform.openai.com/assistants).
+    *   Click **+ Create**.
+    *   **Name**: Choose a descriptive name (e.g., "Group 3 IWU Assistant").
+    *   **Instructions**: Copy the full content of `system_prompt.md` from this project and paste it into the instructions field.
+    *   **Model**: Select `gpt-4o` for the best balance of performance and cost.
+    *   **Temperature**: Set to `1.0`.
+    *   **Top P**: Set to `1.0`.
+    *   Enable the **Retrieval** tool.
+
+3.  **Create a Vector Store for Resumes**
+    *   Navigate to the [Storage page](https://platform.openai.com/storage/vector_stores) and create a new vector store.
+    *   Give the vector store a name (e.g., "Team Resumes").
+    *   Upload the team members' resume files into this vector store.
+    *   Return to your assistant's configuration page. Under the **Retrieval** tool section, attach the newly created vector store.
+    *   Save the assistant.
+
+4.  **Create an API Key**
+    *   Go to the [API Keys page](https://platform.openai.com/api-keys).
+    *   Click **Create new secret key**.
+    *   Name your key, create it, and **copy it immediately**. You will not be able to see it again.
+
+5.  **Get Your Assistant ID**
+    *   On the [Assistants page](https://platform.openai.com/assistants), you will see your newly created assistant. The ID (e.g., `asst_...`) is listed there. Copy it.
 
 ### Local Development
 
@@ -34,10 +64,10 @@ A modern, responsive chatbot interface built with Next.js and integrated with Op
 
 3. **Set up environment variables:**
    
-   Create a `.env.local` file in the root directory:
+   Create a `.env.local` file in the root directory. Use the Assistant ID and API Key you created in the "OpenAI Assistant and API Key Setup" section.
    ```env
    OPENAI_API_KEY=your_openai_api_key_here
-   ASSISTANT_ID=asst_XL1dp4NstLPyRzITCUf9nQE1
+   ASSISTANT_ID=your_assistant_id_here
    NEXT_PUBLIC_APP_NAME="Group 3 Chatbot"
    ```
 
@@ -64,9 +94,9 @@ A modern, responsive chatbot interface built with Next.js and integrated with Op
 
 3. **Set environment variables in Vercel:**
    
-   In your Vercel dashboard, add these environment variables:
+   In your Vercel dashboard, add the same environment variables you used for local development:
    - `OPENAI_API_KEY`: Your OpenAI API key
-   - `ASSISTANT_ID`: `xx`
+   - `ASSISTANT_ID`: Your Assistant ID
    - `NEXT_PUBLIC_APP_NAME`: `Group 3 Chatbot`
 
 ## Project Structure
