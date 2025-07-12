@@ -9,7 +9,6 @@ const ExampleQuestions: React.FC<ExampleQuestionsProps> = ({ onSendMessage }) =>
     "Come up with some project ideas where all of the group members can contribute.",
     "Who in Group 3 has experience with full-stack web development?",
     "What are the AI interests of the team members?",
-    "Summarize the technical skills of Muja Kayadan.",
     "Who worked on natural language processing in Group 3?"
   ]
 
