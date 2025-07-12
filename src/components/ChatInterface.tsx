@@ -5,6 +5,7 @@ import { Message, ChatState } from '@/types'
 import MessageBubble from './MessageBubble'
 import ChatInput from './ChatInput'
 import LoadingIndicator from './LoadingIndicator'
+import ExampleQuestions from './ExampleQuestions'
 
 const ChatInterface = () => {
   const [chatState, setChatState] = useState<ChatState>({
@@ -98,17 +99,7 @@ const ChatInterface = () => {
               <p className="text-gray-600 mb-6">
                 I'm powered by OpenAI Assistant and ready to help you with any questions you have.
               </p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
-                  Ask questions
-                </span>
-                <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
-                  Get help
-                </span>
-                <span className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
-                  Have a conversation
-                </span>
-              </div>
+              <ExampleQuestions onSendMessage={handleSendMessage} />
             </div>
           </div>
         ) : (
