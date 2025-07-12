@@ -29,7 +29,7 @@ Before running the application, you need to set up an OpenAI Assistant. This inv
     *   Click **+ Create**.
     *   **Name**: Choose a descriptive name (e.g., "Group 3 IWU Assistant").
     *   **Instructions**: Copy the full content of `system_prompt.md` from this project and paste it into the instructions field.
-    *   **Model**: Select `gpt-4o` for the best balance of performance and cost.
+    *   **Model**: Select `gpt-4.1` for the best balance of performance and cost.
     *   **Temperature**: Set to `1.0`.
     *   **Top P**: Set to `1.0`.
     *   Enable the **Retrieval** tool.
